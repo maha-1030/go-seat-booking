@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "32e206f8-f63f-4972-8087-11dec5496f8d",
+		"name": "bookings",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Reset DB with CSV Data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/reset-db-with-csv-data",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reset-db-with-csv-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Seats",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/seats",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"seats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Seat Pricing",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/seats/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"seats",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"IDs\": [1, 2, 3],\r\n    \"Name\": \"maha\",\r\n    \"PhoneNumber\": \"8143236631\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/booking",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Bookings",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/bookings?userIdentifier=8143236631",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookings"
+					],
+					"query": [
+						{
+							"key": "userIdentifier",
+							"value": "8143236631"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
